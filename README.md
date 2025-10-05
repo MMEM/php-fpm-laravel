@@ -1,4 +1,4 @@
-## php fpm alpine container
+## php fpm bookworm container
 
 Creating a new build for the 8.4 version of PHP with a tag '8.4' without multi-arch support:
 
