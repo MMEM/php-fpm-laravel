@@ -34,6 +34,8 @@ RUN set -xe \
     && apt-get purge -y libmcrypt-dev libzip-dev libicu-dev libonig-dev gcc g++ cpp build-essential make autoconf pkg-config git; \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+RUN set -xe && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
+
 COPY ./laravel.ini  /usr/local/etc/php/conf.d
 COPY ./xlaravel.pool.conf /usr/local/etc/php-fpm.d/
 
